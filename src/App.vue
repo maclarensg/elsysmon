@@ -21,7 +21,7 @@
           warning='100'
           critical='100'
           metric=""
-          />
+          v-if="false"/>
         <app-indicator name="Temperature"
           :value="data.temperature"
           maxvalue='50'
@@ -107,7 +107,7 @@ export default {
   },
   methods:{
     fetchData(){
-      this.$http.get('sensor.json')
+      this.$http.get('device/A81758FFFE032732')
         .then( response => {
           return response.json();
         })
